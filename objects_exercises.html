@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>JS Objects Exercises</title>
+</head>
+<h1>Example JavaScript Page: Objects</h1>
+<body>
+
+<script type="text/javascript">
+//===============================
+// EXERCISE 1: The Recipe Card
+//===============================
+
+var Guacamole = {
+	title: "Barbara's Guacamole",
+	servings: 2,
+	ingredients: ["avocado", "lime juice", "garlic", "oil", "salt"]
+}
+
+document.write(
+"<strong>" + Guacamole.title + "</strong><br/>" +
+"Servings: " + Guacamole.servings + "<br/>" +
+"Ingredients: " + "<br/>" +
+"<ul>")
+for(var i = 0; i < Guacamole.ingredients.length; i++){
+	document.write("<li>" + Guacamole.ingredients[i] + "</li>")
+}
+document.write("</ul>"
+)
+
+//===============================
+// EXERCISE 2: The Reading List
+//===============================
+
+// Keep track of which books you read and which books you want to read!
+
+// Create an array of objects, where each object describes a book and has properties for the title (a string), author (a string), and alreadyRead (a boolean indicating if you read it yet).
+
+var books = [
+{title: "The Luminaries",
+author: "Eleanor Catton",
+alreadyRead: true},
+{title: "Don't Make Me Think",
+author: "Steve Krug",
+alreadyRead: false},
+{title: "Wild",
+author: "Cheryl Strayed",
+alreadyRead: true}
+]
+
+for (i = 0; i < books.length; i++){
+		if (books[i].alreadyRead === true){
+		document.write("Already read: " + books[i].title + " by " + books[i].author + "<br/>");}
+		else if(books[i].alreadyRead === false){
+		document.write("Need to read: " + books[i].title + " by " + books[i].author + "<br/>");}
+}
+
+// Iterate through the array of books. For each book, log the book title and book author like so: "The Hobbit by J.R.R. Tolkien".
+
+// Now use an if/else statement to change the output depending on whether you read it yet or not. If you read it, log a string like 'You already read "The Hobbit" by J.R.R. Tolkien', and if not, log a string like 'You still need to read "The Lord of the Rings" by J.R.R. Tolkien.'
+
+
+//===============================
+// EXERCISE 3: The Movie Database
+//===============================
+
+// It's like IMDB, but much much smaller!
+
+// Create an object to store the following information about your favorite movie: title (a string), duration (a number), and stars (an array of strings).
+// Create a function to print out the movie information like so: "Puff the Magic Dragon lasts for 30 minutes. Stars: Puff, Jackie, Living Sneezes."
+
+
+var movie = {title: "Juno", duration: 100, stars: ["Ellen Page", "Michael Cera", "Jennifer Garner"], display: show}
+
+function show(){
+	document.write(this.title + " lasts for " + this.duration + " minutes and stars " + this.stars.join(", "))
+}
+
+movie.display();
+
+
+// movie.title = "Juno"
+// movie.duration = 100
+// movie.stars = ["Ellen Page", "Michael Cera", "Jennifer Garner"]
+
+// function show(){}
+
+</script>
+
+</body>
+</html>

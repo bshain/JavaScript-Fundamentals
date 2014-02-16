@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+	
+<script>
+// Functions Problem 1
+function tellFortune(kids, partner, geo, job) {
+alert("Married to " + partner + ", living in " + geo + ", with " + kids + " kids and working as a " + job + ".");
+}
+// tellFortune(0, "Batman", "Boulder", "Rock Climber")
+
+// Problem 2
+
+function calculateAge(birthYear, currentYear) {
+	var currentYear = new Date().getFullYear()
+	var calc1 = currentYear - birthYear 
+	var calc2 = calc1 - 1
+	console.log("You are either " + calc1 + " or " + calc2);
+}
+
+calculateAge(2000, 2012)
+
+// Problem 3
+
+var maxAge = 88
+var calculateSupply = function(age, amountPerDay){
+	console.log(Math.round((maxAge - age)*amountPerDay*365));
+
+}
+calculateSupply(30, 2.987)
+
+// Problem 4
+
+function calcCircumference(radiusA){
+	console.log(2*Math.PI*radiusA)
+}
+calcCircumference(3)
+
+function calcArea(radius){
+	console.log(Math.PI * Math.pow(radius,2))
+}
+calcArea(3)
+
+// Problem 5
+
+function celsiusToFahrenheit(){
+	c = 27
+	console.log(c + &deg; + " degrees is "+ (c * 9/5 + 32) + " in Fahrenheit.")
+}
+
+celsiusToFahrenheit()
+
+</script>
+
+</head>
+<body>
+<h1>Example JavaScript Page</h1>
+
+</body>
+</html>

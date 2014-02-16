@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Example</title>
+
+</head>
+<body>
+<h1>Example JavaScript Page: If/else statements</h1>
+<h4>What number is bigger?</h4>
+<script>
+
+function greaterNum(one, two){
+	if(one < two)
+		document.write(two)
+	else if(one > two)
+		document.write(one)
+}
+greaterNum(3,8)
+
+</script>
+<h4>The World's Translator</h4>
+<script type="text/javascript">
+	function helloWorld(lang){
+		if(lang === "fr"){
+			document.write("Bonjour" + "<br/>");
+		}
+		else if(lang === "es"){
+			document.write("Hola" + "<br/>");
+		}
+		else if(lang === "bo"){
+			document.write("Dobar dan" + "<br/>");
+		}
+		else{
+			document.write("Hello" + "<br/>");
+		}
+	}
+
+	helloWorld("bo")
+	helloWorld("fr")
+	helloWorld("es")
+	helloWorld("vv")
+
+</script>
+
+<h4>The Grade Assigner</h4>
+<script type="text/javascript">
+	
+	function between(grade, min, max){
+		return grade >= min && grade <= max;
+	}
+
+	function assignGrade(grade){
+		if(between(grade, 90, 100)){
+			document.write("Grade: A" + "<br/>");
+		}
+		else if(between(grade, 80, 89)){
+			document.write("Grade: B" + "<br/>");
+		}
+		else if(between(grade,70, 79)){
+			document.write("Grade: C" + "<br/>");
+		}
+		else if(between(grade,60,69)){
+			document.write("Grade: C-" + "<br/>");
+		}
+		else if(between(grade,50,59)){
+			document.write("Grade: D" + "<br/>");
+		}
+		else if(between(grade,0,49)){
+			document.write("FAIL" + "<br/>");
+		}
+		
+	}
+
+	assignGrade(91)
+	assignGrade(81)
+	assignGrade(71)
+	assignGrade(61)
+	assignGrade(51)
+	assignGrade(49)
+</script>
+
+<h4>The Pluralizer</h4>
+<script type="text/javascript">
+	function pluralize(noun, number){
+		if(number == 1){
+			document.write(number + " " + noun + "<br/>");
+		}
+		else if(number > 1){
+			document.write(number + " " + noun + "s" + "<br/>")
+		}
+		// // else if(noun.match(/oose/g) && number > 1){
+		// // 	document.write(number + " " + noun.replace("oose", "eese") + "<br/>")
+		// }
+	}
+
+	pluralize("cat", 1)
+	pluralize("computer", 7)
+	// pluralize("goose")
+</script>
+
+</body>
+</html>
